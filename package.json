@@ -1,5 +1,5 @@
 {
-  "name": "express-idempotency",
+  "name": "@avi00/express-idempotency",
   "version": "1.0.0",
   "description": "Express middleware to prevent duplicate request processing using idempotency keys",
   "main": "./dist/index.js",

@@ -1,6 +1,6 @@
 # express-idempotency
 
-A lightweight, robust, and type-safe Express middleware to prevent duplicate request processing (e.g. double-charges on payments) using Idempotency Keys. 
+A lightweight, robust, and type-safe Express middleware to prevent duplicate request processing (e.g. duplicate database inserts or spam emails) using Idempotency Keys. 
 
 Built with strict adherence to **SOLID**, **DRY**, and **KISS** principles. Features zero unnecessary dependencies.
 
@@ -43,8 +43,8 @@ app.use(idempotency({
   enforceHeader: false, // If true, throws 400 Bad Request if Idempotency-Key is missing
 }));
 
-app.post('/payments', (req, res) => {
-  res.status(201).json({ success: true, txnId: 'txn_12345' });
+app.post('/submit-form', (req, res) => {
+  res.status(201).json({ success: true, recordId: 'rec_12345' });
 });
 ```
 
